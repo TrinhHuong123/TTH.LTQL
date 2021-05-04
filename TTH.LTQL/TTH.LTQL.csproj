@@ -141,6 +141,7 @@
     <Compile Include="Controllers\KHENTHUONG_KYLUATsController.cs" />
     <Compile Include="Controllers\NHANVIENsController.cs" />
     <Compile Include="Controllers\PHONGBANsController.cs" />
+    <Compile Include="Controllers\RolesController.cs" />
     <Compile Include="Controllers\THONGTINsController.cs" />
     <Compile Include="Controllers\TRINHDO_CMsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -186,6 +187,10 @@
     <Compile Include="Migrations\202105031112487_create_database1.Designer.cs">
       <DependentUpon>202105031112487_create_database1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105040402562_create_table.cs" />
+    <Compile Include="Migrations\202105040402562_create_table.Designer.cs">
+      <DependentUpon>202105040402562_create_table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Models\BANGCHAMCONG.cs" />
@@ -196,8 +201,10 @@
     <Compile Include="Models\LTQLDbContext.cs" />
     <Compile Include="Models\NHANVIEN.cs" />
     <Compile Include="Models\PHONGBAN.cs" />
+    <Compile Include="Models\Role.cs" />
     <Compile Include="Models\THONGTIN.cs" />
     <Compile Include="Models\TRINHDO-CM.cs" />
+    <Compile Include="Models\UserRoleProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1395,6 +1402,11 @@
     <Content Include="Views\THONGTINs\Details.cshtml" />
     <Content Include="Views\THONGTINs\Edit.cshtml" />
     <Content Include="Views\THONGTINs\Index.cshtml" />
+    <Content Include="Views\Roles\Create.cshtml" />
+    <Content Include="Views\Roles\Delete.cshtml" />
+    <Content Include="Views\Roles\Details.cshtml" />
+    <Content Include="Views\Roles\Edit.cshtml" />
+    <Content Include="Views\Roles\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1442,6 +1454,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105031112487_create_database1.resx">
       <DependentUpon>202105031112487_create_database1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105040402562_create_table.resx">
+      <DependentUpon>202105040402562_create_table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

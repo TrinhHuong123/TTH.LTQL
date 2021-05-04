@@ -8,8 +8,12 @@ using TTH.LTQL.Models;
 
 namespace TTH.LTQL.Controllers
 {
+     [Authorize(Roles= "Huong1")]
     public class AccountController : Controller
     {
+
+        LTQLDbContext db = new LTQLDbContext();
+        [AllowAnonymous]
         // GET: Account
         //Action Login(HttpGet), mặc định là get
         public ViewResult Login(string returnUrl)
@@ -23,11 +27,14 @@ namespace TTH.LTQL.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(AccountModel acc, string returnUrl)
         {
+            //var db = new LTQLDbContext();
+            
             // Nếu vượt qua được validation ở accounmodel
             if (ModelState.IsValid)
             {
                 //kiểm tra thông tin đăng nhập
-                if (acc.Username == "admin" && acc.Password == "123123")
+                var model = db.AccountModels.Where(t => t.Username == acc.Username && t.Password == acc.Password).ToList().Count();
+                if (model==1)
                 {
                     //set cookie
                     FormsAuthentication.SetAuthCookie(acc.Username, true);

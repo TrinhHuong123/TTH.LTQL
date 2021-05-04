@@ -20,6 +20,8 @@ namespace TTH.LTQL.Models
         public virtual DbSet<TRINHDO_CM> TRINHDO_CMs { get; set; }
         public virtual DbSet<KHENTHUONG_KYLUAT> KHENTHUONG_KYLUATs { get; set; }
         public virtual DbSet<DUAN> DUANs { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
+        public virtual DbSet<AccountModel> AccountModels { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
